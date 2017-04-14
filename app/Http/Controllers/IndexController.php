@@ -23,6 +23,9 @@ class IndexController extends Controller
     public function view(){
     	return view('index/index');
     }
+    public function greet(){
+        return view('greeting',['name' => 'xiaoyubo']);
+    }
 
 
     /**

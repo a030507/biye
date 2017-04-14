@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">这是我第一个页面</div>
+                <div class="title">{{$info->name}}</div>
+
             </div>
         </div>
     </body>

@@ -21,9 +21,9 @@ Route::get('/hello',['as'=>'helloworld',function(){
 }]);
 
 // 重定向链接跳转到/hello
-Route::get('/test', function () {
-    return redirect()->route('helloworld');
-});
+// Route::get('/test', function () {
+//     return redirect()->route('helloworld');
+// });
 
 // 带参数的路由命名：
 
@@ -62,3 +62,26 @@ Route::group(['prefix' => 'mysql'],function(){
 
 // 视图路由
 Route::get('/index/index','IndexController@view');
+
+Route::get('/greet', function ()    {
+    return view('greeting', ['name' => 'James']);
+});
+
+Route:get('/greeting','IndexController@greet');
+
+Route::get('blade', function () {
+    return view('child');
+});
+
+
+// 认证路由...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+// 注册路由...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+Route::get('profile','UserController@profile');
+
+Route::get('test','TestController@test');

@@ -25,16 +25,18 @@ class MysqlController extends Controller
 
     //查找
     public function select(){
-        $select = DB::select("select * from ims_chat");  
+        $select = DB::select("select * from user where name = ?",[12]);  
+        //返回一个二维数组
         var_dump($select);
+         //以节点树的形式输出结果 
         dd($select);
     }
 
     // 新增
-    public function insert()
-    {
-        $insert=DB::insert("insert into ims_chat(child_id,content)   
-            values(?,?)",[12,"哇塞"]);  
+     public function insert()
+     {
+        $insert=DB::insert("insert into user(name,password)   
+            values(?,?)",["哇塞","1234"]);  
         var_dump($insert);
         dd($insert);
     }
