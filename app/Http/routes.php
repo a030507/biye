@@ -85,3 +85,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::get('profile','UserController@profile');
 
 Route::get('test','TestController@test');
+
+
+    Route::get('/admin','admin\indexController@index');
+    Route::get('/admin/user/','admin\UserController@index');
