@@ -1,9 +1,9 @@
-<form method="POST" action="/auth/login">
+<form method="POST" action="/auth/register">
     {!! csrf_field() !!}
 
     <div>
-        Email
-        <input type="email" name="email" value="{{ old('email') }}">
+        name
+        <input type="name" name="name" value="{{ old('name') }}">
     </div>
 
     <div>

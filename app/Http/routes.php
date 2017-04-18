@@ -88,4 +88,11 @@ Route::get('test','TestController@test');
 
 
     Route::get('/admin','admin\indexController@index');
-    Route::get('/admin/user/','admin\UserController@index');
+
+        //用户管理
+    Route::get('/admin/user', 'admin\UserController@index');
+    Route::get('/admin/user/add', 'admin\UserController@add');
+    Route::post('/admin/user/doAdd', 'admin\UserController@doAdd');
+    Route::get('/admin/user/edit/{id}','admin\UserController@edit');
+    Route::post('/admin/user/doEdit','admin\UserController@doEdit');
+    Route::get('/admin/user/delete/{id}','admin\UserController@delete');
