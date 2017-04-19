@@ -9,7 +9,7 @@
                 用户管理
                 <small>用户列表</small>
             </h1>
-            <a href="" class="btn btn-primary margin-bottom">新增用户</a>
+            <a href="" class="btn btn-primary margin-bottom margin-top">新增用户</a>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
                 <li>用户管理</li>
@@ -56,7 +56,12 @@
                                     </td>
                                     <td>Win 95+</td>
                                     <td> 4</td>
-                                    <td>X</td>
+                                    <td>
+                                        <a href="/admin/user/edit/{{$v->id}}">
+                                        修改</a>
+                                        |
+                                        <a href="/admin/user/delete/{{$v->id}}">
+                                        删除</a>     </td>
                                 </tr>
                                 @endforeach
 
