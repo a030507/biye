@@ -41,7 +41,6 @@
                             <table id="table" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                    <th>选择</th>
                                     <th>用户编号</th>
                                     <th>昵称</th>
                                     <th>所属家族</th>
@@ -52,9 +51,8 @@
                                 @foreach ($list as $v)
                                 <tr>
                                     <td>{{$v->id}}</td>
-                                    <td>{{$v->name}}
+                                    <td>{{$v->nickname}}
                                     </td>
-                                    <td>Win 95+</td>
                                     <td> 4</td>
                                     <td>
                                         <a href="/admin/user/edit/{{$v->id}}">
@@ -66,15 +64,6 @@
                                 @endforeach
 
                                 </tbody>
-                                <!--<tfoot>-->
-                                <!--<tr>-->
-                                    <!--<th>Rendering engine</th>-->
-                                    <!--<th>Browser</th>-->
-                                    <!--<th>Platform(s)</th>-->
-                                    <!--<th>Engine version</th>-->
-                                    <!--<th>CSS grade</th>-->
-                                <!--</tr>-->
-                                <!--</tfoot>-->
                             </table>
                         </div>
                         <!-- /.box-body -->

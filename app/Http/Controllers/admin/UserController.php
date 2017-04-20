@@ -30,8 +30,8 @@ class UserController extends Controller
     }
     public function edit($id)
     {
-    	$userinfo = DB::table('users')->where('id',$id)->first();
-    	return view('admin.user.edit',['userinfo' => $userinfo]);
+    	$data = DB::table('users')->where('id',$id)->first();
+    	return view('admin.user.edit',['data' => $data]);
     }
     public function doEdit(Request $request)
     {
@@ -43,8 +43,8 @@ class UserController extends Controller
     public function delete($id)
     {
     	DB::table('users')->where('id',$id)->delete();
-    	$data = DB::table('users')->get();
-    	return view('admin.user.index',['data'=>$data]);
+    	$list = DB::table('users')->get();
+    	return view('admin.user.index',['list'=>$list]);
     }
     
 }
